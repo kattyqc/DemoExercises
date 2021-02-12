@@ -11,6 +11,8 @@ import FacebookCore
 import FacebookLogin
 import FacebookShare
 import FBSDKCoreKit
+import FBSDKLoginKit
+import FBSDKShareKit
 
 class LoginViewController: UIViewController {
 
@@ -30,43 +32,49 @@ class LoginViewController: UIViewController {
     
     //MARK: - LOGIN FACEBOOK
     @IBAction func loginWithFacebook(_ sender: Any) {
+           
+
+        if let token = AccessToken.current, !token.isExpired { // User is logged in, do work such as go to next view controller.
         
-        let manager = LoginManager()
-        manager.logIn(permissions: [.publicProfile, .email],
-                      viewController: self) { (result) in
-                        switch result {
-                        case .cancelled:
-                            print("User cancelled login process")
-                            break
-                        case .success(let grantedPermissions, let declinedPermissions, let token):
-                            self.facebookProfile()
-                            print("access token == \(token)")
-                            break
-                        case .failed(let error):
-                            print("login failed with error = \(error.localizedDescription)")
-                            break
-            }
         }
-    }
     
+        let manager = LoginManager()
+                      manager.logIn(permissions: [.publicProfile, .email],
+                                    viewController: self) { (result) in
+                                      switch result {
+                                      case .cancelled:
+                                          print("User cancelled login process")
+                                          break
+                                      case .success(let grantedPermissions, let declinedPermissions, let token):
+                                          self.facebookProfile()
+                                          print("access token == \(token)")
+                                          break
+                                      case .failed(let error):
+                                          print("login failed with error = \(error.localizedDescription)")
+                                          break
+                          }
+                      }
+        
+     
+    }
+
+    
+            
     func facebookProfile() {
         
+
         Profile.loadCurrentProfile { (profile, error) in
-            
-            guard let firstName = profile?.firstName  else { return }
+
+
             guard let imageFacebook = profile?.imageURL(forMode: .normal, size: CGSize(width: 120, height: 120)) else { return }
-            guard let lastName = profile?.lastName else { return }
-                print (profile?.userID ?? "")
-                print(error ?? nil)
-            
+            guard let name = profile?.name  else { return }
+            print (profile?.userID ?? "")
             guard let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailLoginViewController else { return }
-                detailVC.nameFdk  = firstName
-                detailVC.lastName = lastName
-                detailVC.imageUrl = imageFacebook
+                  detailVC.nameFdk  = name
+                  detailVC.imageUrl = imageFacebook
             self.navigationController?.pushViewController(detailVC, animated: true)
         }
     }
-    
     
     //MARK: - LOGIN
     @IBAction func loginButton(_ sender: Any) {
