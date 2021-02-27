@@ -24,7 +24,7 @@ class DetailAppTableViewCell: UITableViewCell {
         detailImgView.kf.setImage(with: url)
         detailNameLabel.text = model.name
         detailCompanyLabel.text = model.Company
-        detailPointsLabel.text = model.points
+        detailPointsLabel.text = model.getRatingData()
         detailNumberLabel.text = model.number
         detailTypeLabel.text = model.type
         detailAgeLabel.text = model.age

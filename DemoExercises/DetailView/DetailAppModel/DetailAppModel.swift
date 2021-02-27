@@ -24,5 +24,13 @@ class DetailAppModel: TopAppModel {
         self.imageCollection = imageCollection
     
         super.init(image: image, name: name, Company: company, appId: appId)
+        
+    }
+    func getRatingData() -> String {
+        let pointToFloat = Double(points) ?? 0.0
+        let roundFloat = Double(round(10*pointToFloat)/10)
+        let intPointToString = String(roundFloat)
+        return intPointToString
     }
 }
+
