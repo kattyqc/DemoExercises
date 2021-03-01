@@ -30,6 +30,12 @@ class RegisterViewController: UIViewController {
         repeatPassword.addLeftView("candado")
     }
     
+    @IBAction func stopRegister(_ sender: UIBarButtonItem) {
+       
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
     @IBAction func registerButton(_ sender: Any) {
         
         //check for empty fields..

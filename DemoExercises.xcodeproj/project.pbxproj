@@ -20,7 +20,6 @@
 		3C3CE228224BA51F007D7CB4 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3CE227224BA51F007D7CB4 /* ViewControllerExtension.swift */; };
 		3C3CE22A224BB2BB007D7CB4 /* DetailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3CE229224BB2BB007D7CB4 /* DetailLoginViewController.swift */; };
 		3C3CE22D224BCB9E007D7CB4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3CE22C224BCB9E007D7CB4 /* RegisterViewController.swift */; };
-		3C3CE231224CE8FB007D7CB4 /* TypeOfAnimalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3CE230224CE8FB007D7CB4 /* TypeOfAnimalsViewController.swift */; };
 		3C3CE233224CF5B8007D7CB4 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3CE232224CF5B8007D7CB4 /* ColorExtension.swift */; };
 		3C3CE238224D166D007D7CB4 /* TopAppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3CE237224D166D007D7CB4 /* TopAppModel.swift */; };
 		3C3CE23B224D1C95007D7CB4 /* TopAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3CE23A224D1C95007D7CB4 /* TopAppViewController.swift */; };
@@ -49,7 +48,6 @@
 		3C3CE227224BA51F007D7CB4 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		3C3CE229224BB2BB007D7CB4 /* DetailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLoginViewController.swift; sourceTree = "<group>"; };
 		3C3CE22C224BCB9E007D7CB4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		3C3CE230224CE8FB007D7CB4 /* TypeOfAnimalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfAnimalsViewController.swift; sourceTree = "<group>"; };
 		3C3CE232224CF5B8007D7CB4 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		3C3CE237224D166D007D7CB4 /* TopAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAppModel.swift; sourceTree = "<group>"; };
 		3C3CE23A224D1C95007D7CB4 /* TopAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAppViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 				3C3CE221224ADDEE007D7CB4 /* LoginControllers */,
 				3C3CE22B224BCB4C007D7CB4 /* DetailLoginViewController */,
 				3C3CE22E224BCBA5007D7CB4 /* RegisterViewController */,
-				3C3CE22F224CE859007D7CB4 /* TypeOfAnimalsViewControllers */,
 				3C3CE235224CF767007D7CB4 /* TopAppsTableView */,
 				3C3CE247224F8205007D7CB4 /* DetailView */,
 				3C3CE213224A413B007D7CB4 /* Main.storyboard */,
@@ -161,14 +158,6 @@
 				3C3CE22C224BCB9E007D7CB4 /* RegisterViewController.swift */,
 			);
 			path = RegisterViewController;
-			sourceTree = "<group>";
-		};
-		3C3CE22F224CE859007D7CB4 /* TypeOfAnimalsViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				3C3CE230224CE8FB007D7CB4 /* TypeOfAnimalsViewController.swift */,
-			);
-			path = TypeOfAnimalsViewControllers;
 			sourceTree = "<group>";
 		};
 		3C3CE235224CF767007D7CB4 /* TopAppsTableView */ = {
@@ -390,7 +379,6 @@
 				3C3CE23B224D1C95007D7CB4 /* TopAppViewController.swift in Sources */,
 				3C3CE23E224D1DBB007D7CB4 /* TopAppTableViewCell.swift in Sources */,
 				3C3CE24B224F8293007D7CB4 /* DetailAppViewController.swift in Sources */,
-				3C3CE231224CE8FB007D7CB4 /* TypeOfAnimalsViewController.swift in Sources */,
 				3C3CE238224D166D007D7CB4 /* TopAppModel.swift in Sources */,
 				3C3CE24D224F82B8007D7CB4 /* DetailAppTableViewCell.swift in Sources */,
 				3C3CE210224A413B007D7CB4 /* AppDelegate.swift in Sources */,
