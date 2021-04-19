@@ -7,8 +7,8 @@ target 'DemoExercises' do
 
   # Pods for DemoExercises
 
-pod 'SwiftyJSON', '~> 4.0'
-pod 'Alamofire', '~> 4.7'
-pod 'Kingfisher', '~> 5.0'
+pod 'SwiftyJSON'
+pod 'Alamofire'
+pod 'Kingfisher'
 
 end

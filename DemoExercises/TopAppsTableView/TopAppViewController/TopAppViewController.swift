@@ -26,7 +26,7 @@ class TopAppViewController: UIViewController, UITableViewDataSource, UITableView
     //MARK: - FUNCTIONS
     func getJson() {
         
-        Networking().getData(url: "https://rss.itunes.apple.com/api/v1/ve/ios-apps/top-free/all/100/explicit.json") { response in
+        Networking().getData(url: "https://rss.itunes.apple.com/api/v1/es/ios-apps/top-free/all/100/explicit.json") { response in
             
             self.appTop = ParseModel().parseJson(withValue: (response.result.value as Any))
             self.tableView.reloadData()
